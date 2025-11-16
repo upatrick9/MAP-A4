@@ -27,12 +27,9 @@ public class VarDeclStmt implements IStmt {
         MyIDictionary<String, Value> symTable = state.getSymTable();
         if(symTable.isDefined(name))
             throw new VariableAlreadyExists();
-        if(type.equals(new IntType()))
-            symTable.update(name, new IntValue(0));
-        else if (type.equals(new BoolType()))
-            symTable.update(name, new BoolValue(false));
-        else if (type.equals(new StringType()))
-            symTable.update(name, new StringValue(""));
+
+        symTable.update(name, type.defaultValue());
+
         return state;
     }
 

@@ -1,6 +1,7 @@
 package models.expressions;
 
 import models.adts.MyIDictionary;
+import models.adts.MyIHeap;
 import models.exceptions.*;
 import models.types.IntType;
 import models.values.IntValue;
@@ -17,12 +18,12 @@ public class ArithExp implements Exp {
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> tbl) throws InvalidIntegerOperand, InvalidArithmeticOperator, DivisionByZero {
-        Value v1 = exp1.eval(tbl);
+    public Value eval(MyIDictionary<String, Value> tbl,MyIHeap<Value> heap) throws InvalidIntegerOperand, InvalidArithmeticOperator, DivisionByZero {
+        Value v1 = exp1.eval(tbl,heap);
         if(!v1.getType().equals(new IntType())) {
             throw new InvalidIntegerOperand();
         }
-        Value v2 = exp2.eval(tbl);
+        Value v2 = exp2.eval(tbl,heap);
         if(!v2.getType().equals(new IntType())) {
             throw new InvalidIntegerOperand();
         }

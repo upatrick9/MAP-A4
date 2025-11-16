@@ -39,6 +39,9 @@ public class Repository implements IRepository {
             logFile.println("SymTable:");
             prg.getSymTable().getContent().forEach((k, v) -> logFile.println(k + " --> " + v));
 
+            logFile.println("Heap:");
+            prg.getHeap().getContent().forEach((k, v) -> logFile.println(k + " --> " + v));
+
             logFile.println("Out:");
             prg.getOut().getList().forEach(o -> logFile.println(o));
 

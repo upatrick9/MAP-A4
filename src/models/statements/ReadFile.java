@@ -29,7 +29,7 @@ public class ReadFile implements IStmt {
                 !(symTable.lookup(varName).getType() instanceof IntType))
             throw new MyException("readFile: " + varName + " is not an int variable!");
 
-        Value value = exp.eval(symTable);
+        Value value = exp.eval(symTable, state.getHeap());
         if (!(value.getType() instanceof StringType))
             throw new MyException("readFile: expression is not a string!");
 

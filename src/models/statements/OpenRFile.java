@@ -23,7 +23,7 @@ public class OpenRFile implements IStmt {
     public PrgState execute(PrgState state) throws MyException {
         MyIFileTable<StringValue, BufferedReader> fileTable = state.getFileTable();
 
-        Value value = exp.eval(state.getSymTable());
+        Value value = exp.eval(state.getSymTable(), state.getHeap());
         if (!(value.getType() instanceof StringType))
             throw new MyException("openRFile: expression does not evaluate to a string!");
 

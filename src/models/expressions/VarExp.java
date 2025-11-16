@@ -1,6 +1,7 @@
 package models.expressions;
 
 import models.adts.MyIDictionary;
+import models.adts.MyIHeap;
 import models.exceptions.*;
 import models.values.Value;
 
@@ -12,7 +13,7 @@ public class VarExp implements Exp{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> tbl) throws MyException{
+    public Value eval(MyIDictionary<String, Value> tbl, MyIHeap<Value> heap) throws MyException{
         if(!tbl.isDefined(id))
             throw new VariableNotDefined(id);
         return tbl.lookup(id);

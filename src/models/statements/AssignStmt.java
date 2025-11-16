@@ -25,7 +25,7 @@ public class AssignStmt implements IStmt{
         if(!symTable.isDefined(id))
             throw new VariableNotDefined(id);
 
-        Value val = exp.eval(symTable);
+        Value val = exp.eval(symTable, state.getHeap());
         Type typeId = symTable.lookup(id).getType();
 
         if(!val.getType().equals(typeId))

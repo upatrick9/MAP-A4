@@ -1,6 +1,7 @@
 package models.expressions;
 
 import models.adts.MyIDictionary;
+import models.adts.MyIHeap;
 import models.exceptions.InvalidArithmeticOperator;
 import models.exceptions.InvalidIntegerOperand;
 import models.exceptions.MyException;
@@ -18,9 +19,9 @@ public class RelExp implements Exp {
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> tbl) throws MyException {
-        Value v1 = e1.eval(tbl);
-        Value v2 = e2.eval(tbl);
+    public Value eval(MyIDictionary<String, Value> tbl, MyIHeap<Value> heap) throws MyException {
+        Value v1 = e1.eval(tbl, heap);
+        Value v2 = e2.eval(tbl, heap);
         if (!(v1.getType() instanceof IntType) || !(v2.getType() instanceof IntType))
             throw new InvalidIntegerOperand();
 

@@ -1,6 +1,7 @@
 package models.expressions;
 
 import models.adts.MyIDictionary;
+import models.adts.MyIHeap;
 import models.exceptions.*;
 import models.types.BoolType;
 import models.values.BoolValue;
@@ -17,12 +18,12 @@ public class LogicExp implements Exp{
     }
 
     @Override
-    public Value eval(MyIDictionary<String, Value> tbl) throws MyException {
-        Value v1 = exp1.eval(tbl);
+    public Value eval(MyIDictionary<String, Value> tbl, MyIHeap<Value> heap) throws MyException {
+        Value v1 = exp1.eval(tbl, heap);
         if(!v1.getType().equals(new BoolType())){
             throw new InvalidBooleanOperand();
         }
-        Value v2 = exp2.eval(tbl);
+        Value v2 = exp2.eval(tbl, heap);
         if(!v2.getType().equals(new BoolType())){
             throw new InvalidBooleanOperand();
         }
