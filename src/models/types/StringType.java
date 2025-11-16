@@ -10,4 +10,6 @@ public class StringType implements Type {
     public boolean equals(Object obj){ return obj instanceof StringType; }
     @Override
     public String toString(){ return "string"; }
+    @Override
+    public Type deepCopy() { return new StringType(); }
 }

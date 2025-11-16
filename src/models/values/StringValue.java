@@ -19,4 +19,9 @@ public class StringValue implements Value {
 
     @Override
     public String toString(){ return "\"" + val + "\""; }
+
+    @Override
+    public Value deepCopy() {
+        return new StringValue(val);
+    }
 }

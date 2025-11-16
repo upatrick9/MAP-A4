@@ -30,4 +30,9 @@ public class IntValue implements Value{
     public String toString(){
         return Integer.toString(val);
     }
+
+    @Override
+    public Value deepCopy() {
+        return new IntValue(val);
+    }
 }
