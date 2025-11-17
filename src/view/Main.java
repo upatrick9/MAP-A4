@@ -90,6 +90,29 @@ public class Main {
                         )
                 );
 
+        IStmt ex6 =
+                new CompStmt(
+                        new VarDeclStmt("v", new IntType()),
+                        new CompStmt(
+                                new AssignStmt("v", new ValueExp(new IntValue(0))),
+                                new CompStmt(
+                                        new WhileStmt(
+                                                new RelExp("<",
+                                                        new VarExp("v"),
+                                                        new ValueExp(new IntValue(3))),
+                                                new CompStmt(
+                                                        new PrintStmt(new VarExp("v")),
+                                                        new AssignStmt("v",
+                                                                new ArithExp('+',
+                                                                        new VarExp("v"),
+                                                                        new ValueExp(new IntValue(1))))
+                                                )
+                                        ),
+                                        new PrintStmt(new VarExp("v"))
+                                )
+                        )
+                );
+
         var stk1 = new MyStack<IStmt>();
         var sym1 = new MyDictionary<String, Value>();
         var out1 = new MyList<Value>();
@@ -120,17 +143,25 @@ public class Main {
         var ft5  = new FileTable<StringValue, BufferedReader>();
         PrgState prg5 = new PrgState(stk5, sym5, out5, ft5, ex5);
 
+        var stk6 = new MyStack<IStmt>();
+        var sym6 = new MyDictionary<String, Value>();
+        var out6 = new MyList<Value>();
+        var ft6  = new FileTable<StringValue, BufferedReader>();
+        PrgState prg6 = new PrgState(stk6, sym6, out6, ft6, ex6);
+
         IRepository repo1 = new Repository(prg1, "log1.txt");
         IRepository repo2 = new Repository(prg2, "log2.txt");
         IRepository repo3 = new Repository(prg3, "log3.txt");
         IRepository repo4 = new Repository(prg4, "log4.txt");
         IRepository repo5 = new Repository(prg5, "log5.txt");
+        IRepository repo6 = new Repository(prg6, "log6.txt");
 
         Controller ctr1 = new Controller(repo1);
         Controller ctr2 = new Controller(repo2);
         Controller ctr3 = new Controller(repo3);
         Controller ctr4 = new Controller(repo4);
         Controller ctr5 = new Controller(repo5);
+        Controller ctr6 = new Controller(repo6);
 
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
@@ -140,6 +171,7 @@ public class Main {
         menu.addCommand(new RunExample("3", ex3.toString(), ctr3));
         menu.addCommand(new RunExample("4", ex4.toString(), ctr4));
         menu.addCommand(new RunExample("5", ex5.toString(), ctr5));
+        menu.addCommand(new RunExample("6", ex6.toString(), ctr6));
         menu.show();
     }
 }

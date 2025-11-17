@@ -1,0 +1,359 @@
+ExeStack:
+[(int v ; (v = 0 ; (While(v < 3) (Print(v) ; v = v+1) ; Print(v))))]
+SymTable:
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[(v = 0 ; (While(v < 3) (Print(v) ; v = v+1) ; Print(v))), int v]
+SymTable:
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[(v = 0 ; (While(v < 3) (Print(v) ; v = v+1) ; Print(v))), int v]
+SymTable:
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[(v = 0 ; (While(v < 3) (Print(v) ; v = v+1) ; Print(v)))]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[(v = 0 ; (While(v < 3) (Print(v) ; v = v+1) ; Print(v)))]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[(While(v < 3) (Print(v) ; v = v+1) ; Print(v)), v = 0]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[(While(v < 3) (Print(v) ; v = v+1) ; Print(v)), v = 0]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[(While(v < 3) (Print(v) ; v = v+1) ; Print(v))]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[(While(v < 3) (Print(v) ; v = v+1) ; Print(v))]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1)]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1)]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), (Print(v) ; v = v+1)]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), (Print(v) ; v = v+1)]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1, Print(v)]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1, Print(v)]
+SymTable:
+v --> 0
+Heap:
+Out:
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1]
+SymTable:
+v --> 0
+Heap:
+Out:
+0
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1]
+SymTable:
+v --> 0
+Heap:
+Out:
+0
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1)]
+SymTable:
+v --> 1
+Heap:
+Out:
+0
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1)]
+SymTable:
+v --> 1
+Heap:
+Out:
+0
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), (Print(v) ; v = v+1)]
+SymTable:
+v --> 1
+Heap:
+Out:
+0
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), (Print(v) ; v = v+1)]
+SymTable:
+v --> 1
+Heap:
+Out:
+0
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1, Print(v)]
+SymTable:
+v --> 1
+Heap:
+Out:
+0
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1, Print(v)]
+SymTable:
+v --> 1
+Heap:
+Out:
+0
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1]
+SymTable:
+v --> 1
+Heap:
+Out:
+0
+1
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1]
+SymTable:
+v --> 1
+Heap:
+Out:
+0
+1
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1)]
+SymTable:
+v --> 2
+Heap:
+Out:
+0
+1
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1)]
+SymTable:
+v --> 2
+Heap:
+Out:
+0
+1
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), (Print(v) ; v = v+1)]
+SymTable:
+v --> 2
+Heap:
+Out:
+0
+1
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), (Print(v) ; v = v+1)]
+SymTable:
+v --> 2
+Heap:
+Out:
+0
+1
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1, Print(v)]
+SymTable:
+v --> 2
+Heap:
+Out:
+0
+1
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1, Print(v)]
+SymTable:
+v --> 2
+Heap:
+Out:
+0
+1
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1]
+SymTable:
+v --> 2
+Heap:
+Out:
+0
+1
+2
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1), v = v+1]
+SymTable:
+v --> 2
+Heap:
+Out:
+0
+1
+2
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1)]
+SymTable:
+v --> 3
+Heap:
+Out:
+0
+1
+2
+FileTable:
+
+ExeStack:
+[Print(v), While(v < 3) (Print(v) ; v = v+1)]
+SymTable:
+v --> 3
+Heap:
+Out:
+0
+1
+2
+FileTable:
+
+ExeStack:
+[Print(v)]
+SymTable:
+v --> 3
+Heap:
+Out:
+0
+1
+2
+FileTable:
+
+ExeStack:
+[Print(v)]
+SymTable:
+v --> 3
+Heap:
+Out:
+0
+1
+2
+FileTable:
+
+ExeStack:
+[]
+SymTable:
+v --> 3
+Heap:
+Out:
+0
+1
+2
+3
+FileTable:
+
+ExeStack:
+[]
+SymTable:
+v --> 3
+Heap:
+Out:
+0
+1
+2
+3
+FileTable:
+
